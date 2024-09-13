@@ -1,0 +1,29 @@
+// Removes default styles
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  width: 233px;
+  height: 50px;
+  border-radius: 30px;
+  border: 0;
+}
+
+.short {
+  width: 182px;
+  height: 62px;
+  border-radius: 30px;
+  border: 0;
+}
+
+.primary-btn {
+    background-color: $primary-btn-color;
+    color: #fff;
+}
+
+.secondary-btn {
+  background-color: $secondary-btn-color;
+  color: #fff;
+}

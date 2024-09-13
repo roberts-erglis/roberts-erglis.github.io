@@ -1,0 +1,329 @@
+.video {
+  position: relative;
+  width: 100%;
+  height: 722px;
+  overflow: hidden;
+
+  div {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  img.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  img.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  @media (max-width: 1365px) and (min-width: 768px) {
+    height: 406px;
+    padding-top: 150px;
+  }
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    height: 320px;
+    padding-top: 150px;
+  }
+}
+
+.text-1 {
+  width: 100%;
+  height: 414px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    width: 654px;
+    text-align: center;
+    margin: 0 30px;
+  }
+}
+
+.gallery-1 {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  .top,
+  .bottom {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transform: rotate(180deg);
+  }
+
+  .top {
+    top: -5px;
+  }
+
+  .bottom {
+    bottom: -5px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: relative;
+    z-index: 0;
+    width: 1366px;
+
+    div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .div1 {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+    .div2 {
+      grid-area: 1 / 2 / 3 / 3;
+    }
+    .div3 {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+    .div4 {
+      grid-area: 2 / 3 / 3 / 4;
+    }
+    .div5 {
+      grid-area: 1 / 4 / 3 / 5;
+    }
+
+    @media (max-width: 1365px) {
+      width: 100%;
+    }
+
+    @media (max-width: 767px) and (min-width: 320px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+      }
+
+      .div4 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .div5 {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      .div1 {
+        grid-area: 1 / 2 / 3 / 3;
+      }
+      .div2 {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      .div3 {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+    }
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    z-index: 0;
+
+    .div1 {
+      grid-area: 1 / 1 / 3 / 2;
+    }
+    .div2 {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .div3 {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    .div4 {
+      grid-area: 1 / 3 / 3 / 4;
+    }
+    .div5 {
+      grid-area: 1 / 4 / 3 / 5;
+    }
+
+    div {
+      position: relative;
+    }
+
+    div img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.choices {
+  height: 429px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  @media (max-width: 767px) and (min-width: 320px) {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.message-box {
+  height: 769px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    margin-bottom: 55px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      width: 612px;
+
+      input,
+      textarea {
+        height: 43px;
+        width: 100%;
+        margin-bottom: 15px;
+        border-radius: 6px;
+        border: 0;
+        background-color: $input-bg;
+
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: left;
+        color: $base-color;
+
+        resize: none;
+      }
+
+      .form1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .form2 {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      .form3 {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+      .form4 {
+        grid-area: 3 / 1 / 4 / 3;
+        height: 232px;
+      }
+    }
+
+    @media (max-width: 767px) and (min-width: 320px) {
+      width: 100%;
+
+      .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+
+        .form1 {
+          grid-area: 1 / 1 / 2 / 2;
+        }
+        .form2 {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        .form3 {
+          grid-area: 3 / 1 / 4 / 2;
+        }
+        .form4 {
+          grid-area: 4 / 1 / 5 / 2;
+        }
+      }
+    }
+  }
+
+  p {
+    width: 612px;
+    font-size: 12px;
+    margin-top: 0;
+    color: $base-color;
+  }
+
+  .checkbox {
+    width: 612px;
+    margin-top: 10px;
+    display: flex;
+    align-items: start;
+    color: $base-color;
+
+    label {
+      margin-left: 5px;
+    }
+  }
+
+  button {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .message-box {
+    padding-top: 50px;
+    max-width: 767px;
+    padding-bottom: 75px;
+    form {
+      width: 80%;
+      .grid {
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+  
+        .form1 {
+          grid-area: 1 / 1 / 2 / 2;
+          min-width: 50%;
+        }
+        .form2 {
+          grid-area: 2 / 1 / 3 / 2;
+        }
+        .form3 {
+          grid-area: 3 / 1 / 4 / 2;
+        }
+        .form4 {
+          grid-area: 4 / 1 / 5 / 2;
+        }
+      }
+    }
+
+    p, .checkbox {
+      width: 100%;
+    }
+  }
+}

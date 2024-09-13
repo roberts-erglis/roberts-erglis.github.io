@@ -1,0 +1,56 @@
+// Typography's style
+@mixin font-styles($family, $size, $weight, $line-height) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+// Heading Variant
+@mixin heading-large {
+  @include font-styles("Oswald", 48px, 500, 71.14px);
+}
+@mixin heading-medium {
+  @include font-styles("Oswald", 30px, 500, 44.46px);
+}
+@mixin heading-small {
+  @include font-styles("Oswald", 24px, 500, 35.57px);
+}
+
+// Text Variant
+@mixin text-medium-large {
+  @include font-styles("Montserrat", 24px, 500, 29.26px);
+}
+@mixin text-medium {
+  @include font-styles("Montserrat", 18px, 500, 21.94px);
+}
+@mixin text-regular {
+  @include font-styles("Montserrat", 18px, 400, 21.94px);
+}
+@mixin text-small {
+  @include font-styles("Montserrat", 14px, 500, 17.07px);
+}
+
+// Applying the variants to specific classes
+.h-lg {
+  @include heading-large;
+}
+.h-med {
+  @include heading-medium;
+}
+.h-sm {
+  @include heading-small;
+}
+
+.text-med-lg {
+  @include text-medium-large;
+}
+.text-med {
+  @include text-medium;
+}
+.text-reg {
+  @include text-regular;
+}
+.text-sm {
+  @include text-small;
+}
